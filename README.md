@@ -1,4 +1,4 @@
 sicp-exercises
 ==============
 
-SICP exercise solutions
+My attempts at the exercises in SICP (http://mitpress.mit.edu/sicp).
