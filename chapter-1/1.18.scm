@@ -1,0 +1,10 @@
+(define (double a) (+ a a))
+(define (halve a) (/ a 2))
+
+(define (* a b)
+  (define (iter a b result)
+	(cond ((= b 0) 0)
+		  ((= b 1) (+ a result))
+		  ((even? b) (iter (double a) (halve b) result))
+		  (else (iter a (- b 1) (+ a result)))))
+  (iter a b 0))
