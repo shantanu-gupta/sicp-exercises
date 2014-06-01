@@ -1,0 +1,10 @@
+;;	'() => '()
+;;	'(1) => '(1)
+;;	(1 2 3) => (3 2 1)
+;;	((1 2) (3 4)) => ((4 3) (2 1))
+
+(define (deep-reverse items)
+  (cond ((null? items) items)
+		((not (pair? items)) items)
+		(else (append (deep-reverse (cdr items))
+					  (list (deep-reverse (car items)))))))

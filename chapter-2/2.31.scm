@@ -1,0 +1,5 @@
+(define (tree-map f items)
+  (map (lambda (x) (cond ((null? x) x)
+						 ((not (pair? x)) (f x))
+						 (else (tree-map f x))))
+	   items))
