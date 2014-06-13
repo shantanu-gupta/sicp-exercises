@@ -1,0 +1,17 @@
+(load "differentation.scm")
+
+(define (addend sum) (cadr sum))
+(define (augend sum) 
+  (define (two-term? sum)
+	(null? (cdddr sum)))
+  (if (two-term? sum)
+	(caddr sum)
+	(cons '+ (cddr sum))))
+
+(define (multiplier p) (cadr p))
+(define (multiplicand p) 
+  (define (two-term? p)
+	(null? (cdddr p)))
+  (if (two-term? p)
+	(caddr p)
+	(cons '* (cddr p))))
