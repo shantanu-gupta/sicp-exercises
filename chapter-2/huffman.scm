@@ -12,8 +12,8 @@
 		(+ (weight left) (weight right))))
 
 (define (left-branch tree) (car tree))
-
 (define (right-branch tree) (cadr tree))
+
 (define (symbols tree)
   (if (leaf? tree)
 	(list (symbol-leaf tree))
